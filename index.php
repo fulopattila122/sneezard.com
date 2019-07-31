@@ -1,8 +1,13 @@
 <html>
+<?php
+    $diff = (new DateTime())->diff(new DateTime('2019-10-02 07:00:00+00:00'));
+?>
 <head>
+    <meta property="og:url"           content="http://szneezard.com" />
+    <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Szilard is off!" />
-    <meta property="og:description"   content="Back on the 2nd of October" />
-    <meta property="og:image"         content="https://szneezard.com/szilard.png" />
+    <meta property="og:description"   content="Back in <?= sprintf('%d days %d hours %d minutes %d seconds', $diff->d, $diff->h, $diff->m, $diff->s); ?>" />
+    <meta property="og:image"         content="http://szneezard.com/szilard.png" />
 
     
     <title>Szilard is off!</title>
