@@ -6,7 +6,7 @@
     <meta property="og:url"           content="http://szneezard.com" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Szilard is off!" />
-    <meta property="og:description"   content="Back in <?= sprintf('%d days %d hours %d minutes %d seconds', $diff->d, $diff->h, $diff->m, $diff->s); ?>" />
+    <meta property="og:description"   content="Back in <?= $diff->format('%a days %h hours %i minutes %s seconds'); ?>" />
     <meta property="og:image"         content="http://szneezard.com/szilard.png" />
 
     
@@ -27,7 +27,7 @@
 </head>
 <body>
 <h1>Szilard is off!</h1>
-<h2><span id="timer"></span> until he's back</h2>
+<h2><span id="timer"><?= $diff->format('%a days %h hours %i minutes %s seconds'); ?></span> until he's back</h2>
 <h3>Time is ticking bro!</h3>
 <h3 id="millisecs"></h3>
 <script>
