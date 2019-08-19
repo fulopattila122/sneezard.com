@@ -1,6 +1,6 @@
 <html>
 <?php
-    $diff = (new DateTime())->diff(new DateTime('2019-10-02 07:00:00+00:00'));
+    $diff = (new DateTime())->diff(new DateTime('2019-09-27 07:00:00+00:00'));
 ?>
 <head>
     <meta property="og:url"           content="http://szneezard.com" />
@@ -55,7 +55,7 @@ function startTimer(enddate, display1, display2) {
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   startTimer(
-    new Date('October 2, 2019 07:00:00 GMT'),
+    new Date('September 27, 2019 07:00:00 GMT'),
     document.querySelector('#timer'),
     document.querySelector('#millisecs')
   );
